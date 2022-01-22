@@ -66,7 +66,6 @@ declare global {
 declare namespace LocalJSX {
     interface AppCalculator {
         "initial"?: string;
-        "onClicked"?: (event: CustomEvent<any>) => void;
     }
     interface AppRoot {
     }

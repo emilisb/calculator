@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { render } from "@remote-ui/react";
 import { onRender } from "./api";
-import Display from "./display";
 import calculate, { CalculatorState } from "./calculate";
+import Display from "./display";
 import ButtonPanel from "./button-panel";
 
 onRender((root) => {

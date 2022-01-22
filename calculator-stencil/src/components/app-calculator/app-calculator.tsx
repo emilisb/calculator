@@ -1,4 +1,4 @@
-import { Component, h, Event, Prop, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 import calculate from './calculate';
 
 @Component({
@@ -9,8 +9,6 @@ import calculate from './calculate';
 export class AppCalculator {
   @Prop() initial: string = '0';
 
-  @Event({ bubbles: true }) clicked;
-
   @State() state = {
     total: null,
     next: null,
@@ -19,9 +17,6 @@ export class AppCalculator {
 
   clickHandler = (buttonName: string) => {
     const result = calculate(this.state, buttonName);
-
-    this.clicked.emit(result);
-
     this.state = { ...this.state, ...result };
   };
 
